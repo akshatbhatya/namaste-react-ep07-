@@ -1,7 +1,8 @@
 import React from 'react'
 import Header from './src/Header/Header'
 import ProductBody from './src/Body/ProductBody'
-import { createBrowserRouter } from 'react-router-dom'
+import { Outlet, createBrowserRouter } from 'react-router-dom'
+import About from './src/About/About'
 
 
 function App() {
@@ -10,39 +11,9 @@ function App() {
   return (
     <div>
       <Header/>
-      <ProductBody/>
+      <Outlet/>
     </div>
   )
 }
-let route=createBrowserRouter([
-  {
-    path:"",
-    element:<App/>,
-    children:[
-      {
-        path:"/",
-        element:<App/>
-      },
-      {
-        path:"/about",
-        
-      },
-      {
-        path:"/contact",
-        
-      },
-      {
-        path:"/cart",
-        
-      }
-
-    ]
-
-  },
-  
-
-
-    
-])
 
 export default App
