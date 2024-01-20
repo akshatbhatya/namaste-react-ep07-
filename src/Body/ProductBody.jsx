@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react'
 import "./ProductBody.css"
 import Card from '../Card/Card'
 import { swiggy_url } from '../utils/constants'
+import Shimmer from '../Shimmer'
 
 
 
@@ -29,8 +30,15 @@ function ProductBody() {
         }
         fetchData()
     }, [])
+
+    if(product.length===0){
+       return <Shimmer/>
+    }
     return (
         <div className='productbody-parent'>
+            <Shimmer/>
+            <Shimmer/>
+            <Shimmer/>
 
             {
                 product.map((singleProduct)=>{
