@@ -1,5 +1,6 @@
 import React from 'react'
 import "./Header.css"
+import { Link } from 'react-router-dom'
 function Header() {
     return (
         <div className='header_parent'>
@@ -9,9 +10,9 @@ function Header() {
             </div>
             <div className="navbar">
                 <ul>
-                    <li>Home</li>
-                    <li>About Us</li>
-                    <li>Contact Us</li>
+                    <li><Link to={"/"}>Home</Link></li>
+                    <li><Link to="/about">About Us</Link></li>
+                    <li><Link to={"/contact"}>Contact Us</Link></li>
                     <li>Cart</li>
                 </ul>
             </div>
