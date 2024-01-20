@@ -4,3 +4,7 @@
     display: inline-block;
     margin: 20px;
 }
+
+.content >h4{
+    width: 360px;
+}
