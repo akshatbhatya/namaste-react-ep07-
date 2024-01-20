@@ -1,0 +1,32 @@
+{
+  "name": "namaste-react-ep07-",
+  "version": "1.0.0",
+  "description": "react router",
+  "scripts": {
+    "test": "jest",
+    "start": "parcel index.html"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/akshatbhatya/namaste-react-ep07-.git"
+  },
+  "keywords": [
+    "react",
+    "js"
+  ],
+  "author": "akshat",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/akshatbhatya/namaste-react-ep07-/issues"
+  },
+  "homepage": "https://github.com/akshatbhatya/namaste-react-ep07-#readme",
+  "devDependencies": {
+    "parcel": "^2.11.0",
+    "process": "^0.11.10"
+  },
+  "dependencies": {
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-router-dom": "^6.21.3"
+  }
+}
