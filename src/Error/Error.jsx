@@ -1,10 +1,15 @@
+import { useRouteError } from "react-router-dom"
 import "./Error.css"
 
+
+
 let Error=()=>{
+
+    let err=useRouteError()
     return (
         <>
-        <h2>oops somesthing worg</h2>
-        <p>with us </p>
+        <h2>oops somesthing went wrong</h2>
+        <h3>{err.status } : {err.statusText}</h3>
         </>
     )
 }
