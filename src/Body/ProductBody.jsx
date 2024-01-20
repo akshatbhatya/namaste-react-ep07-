@@ -9,7 +9,9 @@ import Shimmer from '../Shimmer'
 
 function ProductBody() {
 
-    const [product,setProduct]=useState([])
+    const [product,setProduct]=useState([]);
+    const [search,setSearch]=useState("");
+    let [searchData,setSearchData]=useState([])
 
 
     useEffect(() => {
@@ -26,6 +28,7 @@ function ProductBody() {
 
             }
             setProduct(allProduct);
+            setSearchData(allProduct)
 
         }
         fetchData()
@@ -34,18 +37,30 @@ function ProductBody() {
     if(product.length===0){
        return <Shimmer/>
     }
-    return (
-        <div className='productbody-parent'>
-            <Shimmer/>
-            <Shimmer/>
-            <Shimmer/>
 
+    let findSerchData=()=>{
+        if(search==""){
+            setSearchData(product)
+        }
+        let sortedData=product.filter((each)=>each.name.toLowerCase().includes(search.toLowerCase()));
+        setSearchData(sortedData)
+    }
+    return (
+
+        <>
+        <input type="text" placeholder='search  here...' onChange={(e)=>setSearch(e.target.value)} />
+            <button onClick={findSerchData}>search</button>
+        
+        <div className='productbody-parent'>
+
+            
             {
-                product.map((singleProduct)=>{
-                   return <Card data={singleProduct} key={singleProduct.id}/>
+                searchData.map((singleProduct)=>{
+                    return <Card data={singleProduct} key={singleProduct.id}/>
                 })
             }
         </div>
+            </>
     )
 }
 
