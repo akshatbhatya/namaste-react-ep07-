@@ -18,6 +18,7 @@ function ProductBody() {
         let fetchData = async () => {
             let data = await fetch(swiggy_url);
             let response = await data.json()
+            console.log(response);
             let sortedData=(response.data.cards[4].card.card.gridElements.infoWithStyle.restaurants);
             console.log(sortedData);
 
