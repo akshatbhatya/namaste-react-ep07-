@@ -14,3 +14,11 @@
     list-style: none;
     cursor: pointer;
 }
+
+Link{
+    text-decoration: none;
+}
+
+a{
+    text-decoration: none;
+}
