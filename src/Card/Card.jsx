@@ -17,7 +17,7 @@ function Card({data}) {
             <h4>{cuisines.join(", ")}</h4>
             <h4>price :{costForTwo}</h4>
             <h4>Rating :{avgRating}</h4>
-            <h4>Delivery time :{sla.deliveryTime}</h4>
+            <h4>Delivery time :{sla.deliveryTime} Min</h4>
         </div>
       
     </div>
