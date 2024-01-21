@@ -3,6 +3,7 @@ import "./ProductBody.css"
 import Card from '../Card/Card'
 import { swiggy_url } from '../utils/constants'
 import Shimmer from '../Shimmer'
+import { Link } from 'react-router-dom'
 
 
 
@@ -90,7 +91,8 @@ function ProductBody() {
 
                 {
                     searchData.map((singleProduct) => {
-                        return <Card data={singleProduct} key={singleProduct.id} />
+                        return <Link to={"/reasturant/"+singleProduct.id} key={singleProduct.id}><Card data={singleProduct} /></Link>
+
                     })
                 }
             </div>

@@ -6,6 +6,7 @@ import About from "./src/About/About"
 import ProductBody from "./src/Body/ProductBody"
 import Contact from "./src/Contact/Contact"
 import Error from "./src/Error/Error"
+import ReasturantPage from "./src/ReasturantPage/ReasturantPage"
 
 
 let appRouter=createBrowserRouter([
@@ -25,6 +26,10 @@ let appRouter=createBrowserRouter([
         {
             path:"/contact",
             element:<Contact/>
+          },
+          {
+            path:"/reasturant/:resId",
+            element:<ReasturantPage/>
           }
       ]
     }
