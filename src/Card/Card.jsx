@@ -11,13 +11,13 @@ function Card({data}) {
             <img src={image_link+cloudinaryImageId} alt={image_link} />
         </div>
         <div className="content">
-            <h4>{name}</h4>
-            <h4>{areaName}</h4>
-            <h4>{locality}</h4>
+            <h4>Name : {name}</h4>
+            <h4>Area :{areaName}</h4>
+            <h4>locality: {locality}</h4>
             <h4>{cuisines.join(", ")}</h4>
-            <h4>{costForTwo}</h4>
-            <h4>{avgRating}</h4>
-            <h4>{sla.deliveryTime}</h4>
+            <h4>price :{costForTwo}</h4>
+            <h4>Rating :{avgRating}</h4>
+            <h4>Delivery time :{sla.deliveryTime}</h4>
         </div>
       
     </div>
